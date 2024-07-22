@@ -96,6 +96,9 @@ importers:
       class-validator:
         specifier: ^0.14.1
         version: 0.14.1
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       drizzle-orm:
         specifier: ^0.32.0
         version: 0.32.0(pg@8.12.0)
@@ -114,6 +117,9 @@ importers:
       passport-jwt:
         specifier: ^4.0.1
         version: 4.0.1
+      passport-local:
+        specifier: ^1.0.0
+        version: 1.0.0
       pg:
         specifier: ^8.12.0
         version: 8.12.0
@@ -10749,6 +10755,13 @@ packages:
     resolution: {integrity: sha512-UCKMDYhNuGOBE9/9Ycuoyh7vP6jpeTp/+sfMJl7nLff/t6dps+iaeE0hhNkKN8/HZHcJ7lCdOyDxHdDoxoSvdQ==}
     dependencies:
       jsonwebtoken: 9.0.2
+      passport-strategy: 1.0.0
+    dev: false
+
+  /passport-local@1.0.0:
+    resolution: {integrity: sha512-9wCE6qKznvf9mQYYbgJ3sVOHmCWoUNMVFoZzNoznmISbhnNNPhN9xfY3sLmScHMetEJeoY7CXwfhCe7argfQow==}
+    engines: {node: '>= 0.4.0'}
+    dependencies:
       passport-strategy: 1.0.0
     dev: false
 

@@ -15,6 +15,13 @@
       "when": 1721657875341,
       "tag": "20240722141755_stiff_stick",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1721663895489,
+      "tag": "20240722155815_easy_nekra",
+      "breakpoints": true
     }
   ]
 }
