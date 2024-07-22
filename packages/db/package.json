@@ -1,0 +1,29 @@
+{
+  "name": "@dds/db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema/schema.ts"
+  },
+  "scripts": {
+    "db:generate": "npx drizzle-kit generate:pg --out migrations --schema src/schema/schema.ts",
+    "db:migrate": "tsx src/migrate/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.1",
+    "drizzle-zod": "^0.5.1",
+    "postgres": "^3.4.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.19.12",
+    "tsx": "^4.7.1"
+  }
+}
