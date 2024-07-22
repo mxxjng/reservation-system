@@ -1,0 +1,1 @@
+ALTER TABLE "reservation" ALTER COLUMN "reservation_date" SET DATA TYPE date;
