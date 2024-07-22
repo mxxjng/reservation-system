@@ -1,0 +1,12 @@
+{
+  "name": "@repo/lib",
+  "private": true,
+  "version": "0.0.1",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "^5.3.3"
+  }
+}
