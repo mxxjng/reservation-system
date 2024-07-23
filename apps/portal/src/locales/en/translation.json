@@ -1,0 +1,54 @@
+{
+    "login": {
+        "title": "Welcome back!",
+        "introText": "Please login with your E-Mail address and password.",
+        "registerQuestion": "Don't have an account yet?",
+        "registerLink": "Register now!",
+        "form": {
+            "email": {
+                "label": "E-Mail address",
+                "placeholder": "Enter email address"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Enter Password"
+            },
+            "submit": "Login"
+        }
+    },
+    "register": {
+        "title": "Welcome !",
+        "introText": "Please register with your E-Mail address and password.",
+        "loginQuestion": "Already have an account?",
+        "loginLink": "Login now!",
+        "form": {
+            "email": {
+                "label": "E-Mail address",
+                "placeholder": "Enter email address"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Enter Password"
+            },
+            "password2": {
+                "label": "Confirm Password",
+                "placeholder": "Please confirm Password"
+            },
+            "firstName": {
+                "label": "First name",
+                "placeholder": "Enter first name"
+            },
+            "lastName": {
+                "label": "Last name",
+                "placeholder": "Enter last name"
+            },
+            "submit": "Register"
+        }
+    },
+    "notifications": {
+        "loginSuccess": {
+            "title": "Login success!",
+            "message": "Your login was successfull."
+        }
+    }
+}

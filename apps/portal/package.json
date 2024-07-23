@@ -25,15 +25,19 @@
     "@tabler/icons-react": "^2.47.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.7",
+    "i18next": "^23.12.2",
+    "lucide-react": "^0.414.0",
     "postcss": "^8.4.39",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.52.1",
+    "react-i18next": "^15.0.0",
     "react-query": "^3.39.3",
     "react-resizable-panels": "^2.0.3",
     "react-router-dom": "^6.22.0",
     "react-toastify": "^10.0.5",
-    "zod": "link:@hookform/resolvers/zod"
+    "zod": "link:@hookform/resolvers/zod",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.41.2",

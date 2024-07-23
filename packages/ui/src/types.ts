@@ -9,6 +9,8 @@ export type FormInputProps<Model extends Record<string, any>> = {
 
   /* error message to be shown if input is invalid */
   errorMessage?: string | any;
+
+  label?: string;
 };
 
 export type InputTypes = "STRING" | "NUMBER";

@@ -11,6 +11,7 @@ import ApiClient from "@/api/api-client";
 import { EmptyListHandler } from "@/components/DataHandling/EmptyListHandler/EmptyListHandler";
 import LoadingHandler from "@/components/DataHandling/LoadingHandler/LoadingHandler";
 import { apiEndpoints, config } from "@/utils/constants";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -39,6 +40,8 @@ const Home = () => {
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold underline mb-4">Vite + React</h1>
+
+      <Link to="/login">Login</Link>
 
       <LoadingHandler status={status}>
         <EmptyListHandler length={data?.length ?? 0}>

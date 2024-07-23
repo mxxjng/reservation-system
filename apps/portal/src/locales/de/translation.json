@@ -1,0 +1,144 @@
+{
+    "login": {
+        "title": "Willkommen zurück!",
+        "introText": "Logge dich mit deiner E-Mail Adresse und deinem Passwort ein.",
+        "registerQuestion": "Noch keinen Account?",
+        "registerLink": "Jetzt registrieren",
+        "form": {
+            "email": {
+                "label": "E-Mail Adresse",
+                "placeholder": "E-Mail Adresse eingeben"
+            },
+            "password": {
+                "label": "Passwort",
+                "placeholder": "Passwort eingeben"
+            },
+            "submit": "Anmelden"
+        },
+        "notifications": {
+            "error": {
+                "title": "Login fehlgeschlagen",
+                "text": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut."
+            },
+            "success": {
+                "title": "Login erfolgreich",
+                "text": "Du wurdest erfolgreich angemeldet."
+            }
+        }
+    },
+    "resetPassword": {
+        "title": "Passwort zurücksetzen",
+        "introText": "Gib deine E-Mail Adresse ein, um dein Passwort zurückzusetzen.",
+        "form": {
+            "email": {
+                "label": "E-Mail Adresse",
+                "placeholder": "E-Mail Adresse eingeben"
+            },
+            "submit": "E-Mail senden"
+        }
+    },
+    "register": {
+        "title": "Willkommen !",
+        "introText": "Registriere dich mit deiner E-Mail Adresse und deinem Passwort.",
+        "loginQuestion": "Bereits einen Account?",
+        "loginLink": "Jetzt anmelden",
+        "form": {
+            "email": {
+                "label": "E-Mail Adresse",
+                "placeholder": "E-Mail Adresse eingeben"
+            },
+            "password": {
+                "label": "Passwort",
+                "placeholder": "Passwort eingeben"
+            },
+            "password2": {
+                "label": "Passwort bestätigen",
+                "placeholder": "Passwort bestätigen"
+            },
+            "firstName": {
+                "label": "Vorname",
+                "placeholder": "Vorname eingeben"
+            },
+            "lastName": {
+                "label": "Nachname",
+                "placeholder": "Nachname eingeben"
+            },
+            "submit": "Registrieren",
+            "errors": {
+                "noPasswordMatch": "Die Passwörter stimmen nicht überein."
+            }
+        },
+        "notifications": {
+            "error": {
+                "title": "Registrierung fehlgeschlagen",
+                "text": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut."
+            },
+            "success": {
+                "title": "Registrierung erfolgreich",
+                "text": "Du wurdest erfolgreich registriert."
+            }
+        }
+    },
+    "restaurantOverview": {
+        "title": "Restaurantübersicht",
+        "description": "Hier findest du alle Restaurants, denen du beigetreten bist oder erstellt hast.",
+        "restaurantInvitationLink": "Einladungen",
+        "accountSettingsLink": "Account Einstellungen",
+        "createdRestaurants": {
+            "title": "Erstellte Restaurants",
+            "emptyState": {
+                "title": "Restaurant erstellen",
+                "description": "Erstellen Sie ein neues Restaurant, um mit der Planung zu beginnen.",
+                "actionButton": "Restaurant erstellen"
+            },
+            "actionButton": "Restaurant erstellen"
+        },
+        "joinedRestaurants": {
+            "title": "Beigetretene Restaurants",
+            "emptyState": {
+                "description": "Sie sind noch keinem Restaurant beigetreten. Bitte wenden Sie sich an einen Restaurantleiter, um Sie einzuladen."
+            }
+        }
+    },
+    "restaurantInvitations": {
+        "title": "Einladungen",
+        "backLink": "Zurück zur Übersicht",
+        "emptyState": "Sie haben keine Einladungen erhalten.",
+        "invitation": {
+            "text": "{{name}} hat Sie in das Restaurant {{project}} eingeladen.",
+            "acceptButton": "Annehmen",
+            "declineButton": "Ablehnen"
+        }
+    },
+    "accountSettings": {
+        "title": "Account Einstellungen",
+        "backLink": "Zurück"
+    },
+    "createRestaurants": {
+        "title": "Restaurant erstellen",
+        "backLink": "Zurück",
+        "form": {
+            "name": {
+                "label": "Restaurant Name",
+                "placeholder": "Restaurant Name eingeben"
+            },
+            "description": {
+                "label": "Beschreibung (optional)",
+                "placeholder": "Beschreibung eingeben"
+            },
+            "submit": "Restaurant erstellen",
+            "editSubmit": "Restaurant aktualisieren"
+        }
+    },
+    "notifications": {
+        "loginSuccess": {
+            "title": "Erfolgreich angemeldet!",
+            "message": "Deine Anmeldung war erfolgreich."
+        }
+    },
+    "buttons": {
+        "logout": {
+            "title": "Abmelden"
+        }
+    }
+}

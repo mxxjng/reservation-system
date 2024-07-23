@@ -10,6 +10,7 @@ function StringInput<Model extends Record<string, any>>({
   id,
   errorMessage,
   defaultValue,
+  label,
   required,
   ...props
 }: StringInputProps<Model>) {
@@ -25,6 +26,11 @@ function StringInput<Model extends Record<string, any>>({
       defaultValue={defaultValue ?? undefined}
       render={({ field: { value, onChange } }) => (
         <>
+          {label && (
+            <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+              {label} {required ? "*" : ""}
+            </label>
+          )}
           <Input {...props} value={value} onChange={onChange} />
           {errorMessage && <p>(errorMessage as string)</p>}
         </>
