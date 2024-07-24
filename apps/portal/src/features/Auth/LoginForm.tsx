@@ -39,10 +39,10 @@ const LoginForm = () => {
       />
       <div className="flex justify-end mb-4">
         <Link to="/reset-password">
-          <p className="text-sm">Passwort vergessen?</p>
+          <p className="text-sm text-muted-foreground">Passwort vergessen?</p>
         </Link>
       </div>
-      <Button variant="secondary" size="lg" type="submit" className="mb-4 w-full">
+      <Button size="lg" type="submit" className="mb-4 w-full">
         {loading ? (
           <>
             <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />

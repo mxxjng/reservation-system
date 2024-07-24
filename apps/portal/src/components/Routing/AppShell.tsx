@@ -21,68 +21,61 @@ import {
   ShoppingCart,
   Users,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import Logo from "@/assets/logo.png";
 import { logout } from "@/features/actions/auth";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
+import { cn } from "@repo/ui/utils";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const AppShell = ({ children }: Props) => {
+  const location = useLocation();
+
   return (
-    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-muted/40 md:block">
+    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr] bg-background">
+      <div className="hidden border-r border-border bg-muted/40 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
-          <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
+          <div className="flex h-14 items-center border-b border-border px-4 lg:h-[60px] lg:px-6">
             <Link to="/" className="flex items-center gap-2 font-semibold">
               <img src={Logo} />
             </Link>
             <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
-              <Bell className="h-4 w-4" />
+              <Bell className="h-4 w-4 text-muted-foreground" />
               <span className="sr-only">Toggle notifications</span>
             </Button>
           </div>
           <div className="flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
-                to="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                to="/dashboard"
+                className={cn(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary",
+                  location.pathname === "/dashboard"
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground"
+                )}
               >
                 <Home className="h-4 w-4" />
                 Dashboard
               </Link>
               <Link
-                to="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                to="/reservations"
+                className={cn(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary",
+                  location.pathname === "/reservations"
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground"
+                )}
               >
                 <ShoppingCart className="h-4 w-4" />
-                Orders
+                Reservations
                 <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                   6
                 </Badge>
-              </Link>
-              <Link
-                to="#"
-                className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
-              >
-                <Package className="h-4 w-4" />
-                Products{" "}
-              </Link>
-              <Link
-                to="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <Users className="h-4 w-4" />
-                Customers
-              </Link>
-              <Link
-                to="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <LineChart className="h-4 w-4" />
-                Analytics
               </Link>
             </nav>
           </div>
@@ -104,7 +97,7 @@ const AppShell = ({ children }: Props) => {
         </div>
       </div>
       <div className="flex flex-col">
-        <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+        <header className="flex h-14 items-center gap-4 border-b border-border bg-muted/40 px-4 lg:h-[60px] lg:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="shrink-0 md:hidden">
@@ -175,6 +168,7 @@ const AppShell = ({ children }: Props) => {
             </SheetContent>
           </Sheet>
           <div className="w-full flex-1"></div>
+          <ThemeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">
@@ -182,7 +176,7 @@ const AppShell = ({ children }: Props) => {
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-white">
+            <DropdownMenuContent align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Settings</DropdownMenuItem>

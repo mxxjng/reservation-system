@@ -8,6 +8,7 @@ import AppRoutes from "@/router";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/styles.css";
+import { ThemeProvider } from "./context/theme-provider";
 
 const queryClient = new QueryClient();
 
@@ -26,10 +27,12 @@ function App() {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <AppRoutes />
-      <ToastContainer position="bottom-right" />
-    </QueryClientProvider>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <QueryClientProvider client={queryClient}>
+        <AppRoutes />
+        <ToastContainer position="bottom-right" />
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

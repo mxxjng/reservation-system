@@ -27,7 +27,7 @@ function StringInput<Model extends Record<string, any>>({
       render={({ field: { value, onChange } }) => (
         <>
           {label && (
-            <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+            <label htmlFor={id} className="block text-sm font-medium">
               {label} {required ? "*" : ""}
             </label>
           )}

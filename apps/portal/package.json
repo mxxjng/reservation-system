@@ -23,6 +23,7 @@
     "@repo/ui": "workspace:*",
     "@repo/validators": "workspace:*",
     "@tabler/icons-react": "^2.47.0",
+    "@tanstack/react-table": "^8.19.3",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.7",
     "i18next": "^23.12.2",
@@ -36,6 +37,7 @@
     "react-resizable-panels": "^2.0.3",
     "react-router-dom": "^6.22.0",
     "react-toastify": "^10.0.5",
+    "recharts": "^2.12.7",
     "zod": "link:@hookform/resolvers/zod",
     "zustand": "^4.5.4"
   },
