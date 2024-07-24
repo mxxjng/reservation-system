@@ -18,7 +18,7 @@ type LoadingStatusOptions = {
 // LoadingHandler component to handle the status of the data being fetched
 const LoadingHandler = ({ status, children, errorComponent }: LoadingHandlerProps) => {
   const loadingStatusOptions: LoadingStatusOptions = {
-    loading: <div>Loading...</div>,
+    loading: <div className="text-muted-foreground">Loading...</div>,
     error: errorComponent ?? <DefaultErrorComponent />,
     success: children,
     idle: null,

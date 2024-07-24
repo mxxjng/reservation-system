@@ -63,3 +63,11 @@ export type ReservationResponse = {
   lastname: string;
   reservationDate: string;
 }
+
+export const insertReservationSchema = z.object({
+    email: z.string(),
+    firstname: z.string(),
+    lastname: z.string(),
+    reservationDate: z.string(),
+});
+export type InsertReservationSchema = z.infer<typeof insertReservationSchema>

@@ -25,15 +25,15 @@ function StringInput<Model extends Record<string, any>>({
       }}
       defaultValue={defaultValue ?? undefined}
       render={({ field: { value, onChange } }) => (
-        <>
+        <div>
           {label && (
-            <label htmlFor={id} className="block text-sm font-medium">
+            <label htmlFor={id} className="block text-sm text-muted-foreground font-medium">
               {label} {required ? "*" : ""}
             </label>
           )}
-          <Input {...props} value={value} onChange={onChange} />
+          <Input {...props} value={value} onChange={onChange} className="text-foreground" />
           {errorMessage && <p>(errorMessage as string)</p>}
-        </>
+        </div>
       )}
     />
   );

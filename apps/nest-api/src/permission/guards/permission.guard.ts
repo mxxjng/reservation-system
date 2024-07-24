@@ -30,6 +30,8 @@ export class PermissionGuard implements CanActivate {
 
     const user = await this.userService.findOneWithRole(userId);
 
+    console.log('user with role', user);
+
     if (!user) {
       return false;
     }

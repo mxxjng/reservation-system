@@ -12,6 +12,7 @@ export const loadUser = async () => {
   const token = getLocalStorageItem("token");
 
   if (token) {
+    console.log("token", token);
     setAuthToken(token);
   }
 

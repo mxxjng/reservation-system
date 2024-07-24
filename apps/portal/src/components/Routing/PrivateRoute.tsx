@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { ReloadIcon } from "@radix-ui/react-icons";
+import { Loader2 } from "lucide-react";
 
 import { authStore } from "@/app/auth-store";
 
@@ -23,7 +23,7 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="flex items-center">
-        <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
         <p>loading...</p>
       </div>
     </div>

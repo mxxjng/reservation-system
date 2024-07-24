@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Query,
+} from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 import {
@@ -17,10 +25,20 @@ export class ReservationController {
   @ApiOperation({
     summary: 'Finds all reservations',
   })
+  @Permissions(['read:reservation'])
   @Get()
   async findAll(@Query('email') email: string | undefined) {
     console.log(email);
     return await this.reservationService.findAll(email);
+  }
+
+  @ApiOperation({
+    summary: 'Finds a single reservation',
+  })
+  @Permissions(['read:reservation'])
+  @Get(':id')
+  async findOne(@Param('id') id: string | undefined) {
+    return await this.reservationService.findById(id);
   }
 
   @ApiOperation({
@@ -38,5 +56,14 @@ export class ReservationController {
   @Get('/permissions')
   async permissionTest() {
     return 'hello from permissions';
+  }
+
+  @ApiOperation({
+    summary: 'Deletes a reservation',
+  })
+  @Permissions(['delete:reservation'])
+  @Delete(':id')
+  async delete(@Param('id') id: string) {
+    return await this.reservationService.delete(id);
   }
 }

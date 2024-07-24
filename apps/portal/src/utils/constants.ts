@@ -32,10 +32,20 @@ export const apiEndpoints = {
       method: "GET",
       queryKey: "getReservations",
     },
+    getReservation: {
+      path: (id: string) => `/api/v1/reservations/${id}`,
+      method: "GET",
+      queryKey: "getReservation",
+    },
     createReservations: {
       path: "/api/v1/reservations",
       method: "POST",
       queryKey: "createReservations",
+    },
+    deleteReservations: {
+      path: (id: string) => `/api/v1/reservations/${id}`,
+      method: "DELETE",
+      queryKey: "deleteReservations",
     },
   },
 };
