@@ -13,24 +13,29 @@ export const apiEndpoints = {
     register: {
       path: "/api/v1/auth/register",
       method: "POST",
+      queryKey: "register",
     },
     login: {
       path: "/api/v1/auth/login",
       method: "POST",
+      queryKey: "login",
     },
     getAuthUser: {
       path: "/api/v1/auth/user",
       method: "GET",
+      queryKey: "getAuthUser",
     },
   },
   reservation: {
     getReservations: {
       path: "/api/v1/reservations",
       method: "GET",
+      queryKey: "getReservations",
     },
     createReservations: {
       path: "/api/v1/reservations",
       method: "POST",
+      queryKey: "createReservations",
     },
   },
 };

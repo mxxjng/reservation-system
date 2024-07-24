@@ -54,3 +54,12 @@ export const RegisterSchema = z.object({
 });
 
 export type RegisterRequest = z.infer<typeof RegisterSchema>;
+
+export type ReservationResponse = {
+  id: string;
+  createdAt: string;
+  email: string;
+  firstname: string;
+  lastname: string;
+  reservationDate: string;
+}

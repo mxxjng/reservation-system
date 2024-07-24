@@ -66,7 +66,8 @@ const AppShell = ({ children }: Props) => {
                 to="/reservations"
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary",
-                  location.pathname === "/reservations"
+                  location.pathname.startsWith("/reservations") ||
+                    location.pathname === "/reservations"
                     ? "text-primary font-semibold"
                     : "text-muted-foreground"
                 )}

@@ -5,7 +5,8 @@ import PrivateRoute from "@/components/Routing/PrivateRoute";
 import Dashboard from "@/routes/dashboard";
 import Home from "@/routes/Home";
 import Login from "@/routes/login";
-import Reservations from "./routes/reservations";
+import Reservations from "./routes/reservation/reservations";
+import Reservation from "./routes/reservation/reservation";
 
 const AppRoutes = () => {
   return (
@@ -30,6 +31,16 @@ const AppRoutes = () => {
             <PrivateRoute>
               <AppShell>
                 <Reservations />
+              </AppShell>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/reservations/:reservationId"
+          element={
+            <PrivateRoute>
+              <AppShell>
+                <Reservation />
               </AppShell>
             </PrivateRoute>
           }
