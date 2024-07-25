@@ -1,12 +1,14 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import AppShell from "@/components/Routing/AppShell";
+import PermissionHandler from "@/components/Routing/PermissionGuard";
 import PrivateRoute from "@/components/Routing/PrivateRoute";
-import Dashboard from "@/routes/dashboard";
 import Home from "@/routes/Home";
+import Dashboard from "@/routes/dashboard";
+import Fallback from "@/routes/fallback";
 import Login from "@/routes/login";
-import Reservations from "./routes/reservation/reservations";
-import Reservation from "./routes/reservation/reservation";
+import Reservation from "@/routes/reservation/reservation";
+import Reservations from "@/routes/reservation/reservations";
 
 const AppRoutes = () => {
   return (
@@ -29,9 +31,11 @@ const AppRoutes = () => {
           path="/reservations"
           element={
             <PrivateRoute>
-              <AppShell>
-                <Reservations />
-              </AppShell>
+              <PermissionHandler requiredPermission={["reservation:read"]}>
+                <AppShell>
+                  <Reservations />
+                </AppShell>
+              </PermissionHandler>
             </PrivateRoute>
           }
         />
@@ -39,13 +43,15 @@ const AppRoutes = () => {
           path="/reservations/:reservationId"
           element={
             <PrivateRoute>
-              <AppShell>
-                <Reservation />
-              </AppShell>
+              <PermissionHandler requiredPermission={["reservation:read"]}>
+                <AppShell>
+                  <Reservation />
+                </AppShell>
+              </PermissionHandler>
             </PrivateRoute>
           }
         />
-        <Route path="*" element={<div>Page doesn't exist...</div>} />
+        <Route path="*" element={<Fallback />} />
       </Routes>
     </Router>
   );

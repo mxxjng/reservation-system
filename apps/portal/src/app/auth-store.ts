@@ -1,5 +1,4 @@
 import { create } from "zustand";
-
 import { GetAuthenticatedUserResponse } from "@repo/validators";
 
 interface AuthStore {

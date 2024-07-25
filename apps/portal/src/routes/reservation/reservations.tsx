@@ -1,6 +1,14 @@
 import { Button } from "@repo/ui/button";
 import { Checkbox } from "@repo/ui/checkbox";
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@repo/ui/dialog";
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -9,64 +17,37 @@ import {
 } from "@repo/ui/dropdown-menu";
 import { ReservationResponse } from "@repo/validators";
 import { ColumnDef } from "@tanstack/react-table";
-import { AxiosResponse } from "axios";
-import { ArrowUpDown, Eye, Loader2, MoreHorizontal, PlugIcon, Plus, Trash } from "lucide-react";
-import { useMutation, useQuery, useQueryClient } from "react-query";
 import dayjs from "dayjs";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@repo/ui/dialog";
+import { ArrowUpDown, Eye, Loader2, MoreHorizontal, Plus, Trash } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-import ApiClient from "@/api/api-client";
+import { useDeleteReservation } from "@/api/Reservations/useDeleteReservation";
+import { useReservations } from "@/api/Reservations/useReservations";
 import { EmptyListHandler } from "@/components/DataHandling/EmptyListHandler/EmptyListHandler";
 import LoadingHandler from "@/components/DataHandling/LoadingHandler/LoadingHandler";
 import DynamicTable from "@/components/DataTable/DataTable";
-import { apiEndpoints, config } from "@/utils/constants";
-import { Link } from "react-router-dom";
 import { useModal } from "@/components/Modal/reducer";
-import { toast } from "react-toastify";
 import CreateReservationModal from "@/features/Reservation/Modals/CreateReservationModal";
 
-const { getReservations } = apiEndpoints.reservation;
-const { deleteReservations } = apiEndpoints.reservation;
-
+/* Overview Page for Reservations */
 const Reservations = () => {
-  const queryClient = useQueryClient();
+  const { t } = useTranslation();
+
   /* Page Modal States */
   const { state, openModal, closeModal } = useModal();
 
-  /* Fetch all reservations */
-  const { status, data } = useQuery({
-    queryKey: [getReservations.queryKey],
-    queryFn: async () => {
-      const response: AxiosResponse<ReservationResponse[]> = await ApiClient.get(
-        `${config.urls.API_URL}${getReservations.path}`
-      );
-      return response.data;
-    },
-  });
+  /* Fetches all reservations */
+  const { status, data } = useReservations();
 
   /* Delete a reservation */
-  const { mutate, isLoading: isDeleting } = useMutation({
-    mutationFn: (id: string) => {
-      return ApiClient.delete(`${config.urls.API_URL}${deleteReservations.path(id)}`);
-    },
-    onSuccess: (data) => {
-      console.log("deleting data", data);
-      queryClient.invalidateQueries({ queryKey: [getReservations.queryKey] });
-      toast.success("Reservation deleted successfully");
+  const { mutate, isDeleting } = useDeleteReservation({
+    successFn: () => {
       closeModal();
-    },
-    onError: () => {
-      console.log("error");
     },
   });
 
+  /* Column definition for data table */
   const columns: ColumnDef<ReservationResponse>[] = [
     {
       id: "select",
@@ -204,28 +185,13 @@ const Reservations = () => {
         </DialogContent>
       </Dialog>
 
-      <h1 className="text-3xl font-bold mb-4 text-foreground">Reservation Page</h1>
+      <h1 className="text-3xl font-bold text-foreground">{t("reservationsOverview.title")}</h1>
+      <p className="text-muted-foreground mb-4">{t("reservationsOverview.description")}</p>
+
       <LoadingHandler status={status}>
         <EmptyListHandler
           length={data?.length ?? 0}
-          emptyMessage={
-            <div
-              className="flex flex-1 items-center justify-center rounded-lg border border-border border-dashed shadow-sm p-8"
-              x-chunk="dashboard-02-chunk-1"
-            >
-              <div className="flex flex-col items-center gap-1 text-center">
-                <h3 className="text-2xl font-bold tracking-tight text-foreground">
-                  You have no reservations
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  You can start selling as soon as you add a product.
-                </p>
-                <Button className="mt-4" onClick={() => openModal({ type: "create", data: null })}>
-                  Add Reservation
-                </Button>
-              </div>
-            </div>
-          }
+          emptyMessage={<EmptyMessage openModal={openModal} />}
         >
           {data && (
             <DynamicTable
@@ -248,4 +214,34 @@ const Reservations = () => {
     </>
   );
 };
+
+type EmptyMessageProps = {
+  /* Function to open create modal */
+  openModal: (data: { type: string; data: any }) => void;
+};
+
+/* Displays a message when there are no reservations */
+function EmptyMessage({ openModal }: EmptyMessageProps) {
+  const { t } = useTranslation();
+
+  return (
+    <div
+      className="flex flex-1 items-center justify-center rounded-lg border border-border border-dashed shadow-sm p-8"
+      x-chunk="dashboard-02-chunk-1"
+    >
+      <div className="flex flex-col items-center gap-1 text-center">
+        <h3 className="text-2xl font-bold tracking-tight text-foreground">
+          {t("reservationsOverview.emptyState.title")}
+        </h3>
+        <p className="text-sm text-muted-foreground">
+          {t("reservationsOverview.emptyState.description")}
+        </p>
+        <Button className="mt-4" onClick={() => openModal({ type: "create", data: null })}>
+          {t("reservationsOverview.emptyState.button")}
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 export default Reservations;

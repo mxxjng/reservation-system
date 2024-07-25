@@ -1,9 +1,8 @@
 export const MIN_WIDTH = 768;
 
-// import environment variables
 export const config = {
   urls: {
-    API_URL: "http://localhost:5001",
+    API_URL: import.meta.env.VITE_API_URL,
   },
 };
 
@@ -49,3 +48,10 @@ export const apiEndpoints = {
     },
   },
 };
+
+/* Permission Cases for the application */
+export const permissionCases = [
+  "reservation:read",
+  "reservation:write",
+  "hasRequiredPermissions",
+] as const;
