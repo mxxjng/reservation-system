@@ -1,0 +1,992 @@
+{
+  "landingpage": {
+    "headline": "Catch Europe"
+  },
+  "dashboardpage": {
+    "headline": "Admin Übersicht"
+  },
+  "countriespage": {
+    "headline": "Countries Overview",
+    "description": "All countries covered by Catch Europe",
+    "buttons": {
+      "create": "Create new country"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete country?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting country",
+          "message": "Country could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting country",
+          "message": "Country deleted successfully"
+        }
+      }
+    }
+  },
+  "countriesCreatePage": {
+    "headline": "Create new country",
+    "description": "Create a new country",
+    "backlink": "Back to countries overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Country could not be created",
+          "message": "Error creating country"
+        },
+        "success": {
+          "title": "Country successfully created",
+          "message": "country was successfully created"
+        }
+      }
+    }
+  },
+  "countryDetailPage": {
+    "backlink": "Back to countries overview",
+    "editlink": "Edit country"
+  },
+  "countryEditPage": {
+    "headline": "Edit Country",
+    "description": "Edit the details of a country",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Country couldnt be edited",
+          "message": "Error editing the country"
+        },
+        "success": {
+          "title": "Country edited",
+          "message": "country was successfully edited"
+        }
+      }
+    }
+  },
+  "leaguespage": {
+    "headline": "League Overview",
+    "description": "All leagues covered by Catch Europe",
+    "buttons": {
+      "create": "Create new league"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete league?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting league",
+          "message": "League could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting league",
+          "message": "League deleted successfully"
+        }
+      }
+    }
+  },
+  "leaguesCreatePage": {
+    "headline": "Create new league",
+    "description": "Create a new league",
+    "backlink": "Back to leagues overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Leagues could not be created",
+          "message": "Error creating league"
+        },
+        "success": {
+          "title": "League successfully created",
+          "message": "League was successfully created"
+        }
+      }
+    }
+  },
+  "leagueDetailPage": {
+    "backlink": "Back to leagues overview",
+    "editlink": "Edit league"
+  },
+  "leagueEditPage": {
+    "headline": "Edit League",
+    "description": "Edit the details of a league",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "League couldnt be edited",
+          "message": "Error editing the League"
+        },
+        "success": {
+          "title": "League edited",
+          "message": "League was successfully edited"
+        }
+      }
+    }
+  },
+  "logspage": {
+    "headline": "Logs Overview",
+    "description": "All logs occured in Catch Europe",
+    "buttons": {
+      "create": "Create new log"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete log?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting log",
+          "message": "log could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting log",
+          "message": "log deleted successfully"
+        }
+      }
+    }
+  },
+  "logsCreatePage": {
+    "headline": "Create new log",
+    "description": "Create a new log",
+    "backlink": "Back to logs overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "logs could not be created",
+          "message": "Error creating log"
+        },
+        "success": {
+          "title": "log successfully created",
+          "message": "log was successfully created"
+        }
+      }
+    }
+  },
+  "logDetailPage": {
+    "backlink": "Back to logs overview",
+    "editlink": "Edit log"
+  },
+  "logEditPage": {
+    "headline": "Edit log",
+    "description": "Edit the details of a log",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "log couldnt be edited",
+          "message": "Error editing the log"
+        },
+        "success": {
+          "title": "log edited",
+          "message": "log was successfully edited"
+        }
+      }
+    }
+  },
+  "divisionspage": {
+    "headline": "Divisions Overview",
+    "description": "All Divisions occured in Catch Europe",
+    "buttons": {
+      "create": "Create new Division"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete division?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting division",
+          "message": "division could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting division",
+          "message": "division deleted successfully"
+        }
+      }
+    }
+  },
+  "divisionsCreatePage": {
+    "headline": "Create new division",
+    "description": "Create a new division",
+    "backlink": "Back to divisions overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "division could not be created",
+          "message": "Error creating division"
+        },
+        "success": {
+          "title": "divison successfully created",
+          "message": "divison was successfully created"
+        }
+      }
+    }
+  },
+  "divisionDetailPage": {
+    "backlink": "Back to divisions overview",
+    "editlink": "Edit division"
+  },
+  "divisionEditPage": {
+    "headline": "Edit division",
+    "description": "Edit the details of a division",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "division couldnt be edited",
+          "message": "Error editing the division"
+        },
+        "success": {
+          "title": "division edited",
+          "message": "division was successfully edited"
+        }
+      }
+    }
+  },
+  "seasonspage": {
+    "headline": "Seasons Overview",
+    "description": "All Seasons occured in Catch Europe",
+    "buttons": {
+      "create": "Create new Season"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete season?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting season",
+          "message": "season could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting season",
+          "message": "season deleted successfully"
+        }
+      }
+    }
+  },
+  "seasonsCreatePage": {
+    "headline": "Create new season",
+    "description": "Create a new season",
+    "backlink": "Back to seasons overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "season could not be created",
+          "message": "Error creating season"
+        },
+        "success": {
+          "title": "season successfully created",
+          "message": "season was successfully created"
+        }
+      }
+    }
+  },
+  "seasonDetailPage": {
+    "backlink": "Back to season overview",
+    "editlink": "Edit season"
+  },
+  "seasonEditPage": {
+    "headline": "Edit season",
+    "description": "Edit the details of a season",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "season couldnt be edited",
+          "message": "Error editing the season"
+        },
+        "success": {
+          "title": "season edited",
+          "message": "season was successfully edited"
+        }
+      }
+    }
+  },
+  "playoffroundspage": {
+    "headline": "Playoffrounds Overview",
+    "description": "All Playoffrounds occured in Catch Europe",
+    "buttons": {
+      "create": "Create new Playoffround"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete playoffround?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting playoffround",
+          "message": "playoffround could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting playoffround",
+          "message": "playoffround deleted successfully"
+        }
+      }
+    }
+  },
+  "playoffroundsCreatePage": {
+    "headline": "Create new playoffround",
+    "description": "Create a new playoffround",
+    "backlink": "Back to playoffround overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "playoffround could not be created",
+          "message": "Error creating playoffround"
+        },
+        "success": {
+          "title": "playoffround successfully created",
+          "message": "playoffround was successfully created"
+        }
+      }
+    }
+  },
+  "playoffroundDetailPage": {
+    "backlink": "Back to season playoffround",
+    "editlink": "Edit playoffround"
+  },
+  "playoffroundEditPage": {
+    "headline": "Edit playoffround",
+    "description": "Edit the details of a playoffround",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "playoffround couldnt be edited",
+          "message": "Error editing the playoffround"
+        },
+        "success": {
+          "title": "playoffround edited",
+          "message": "playoffround was successfully edited"
+        }
+      }
+    }
+  },
+  "teamspage": {
+    "headline": "Teams Overview",
+    "description": "All Teams occured in Catch Europe",
+    "buttons": {
+      "create": "Create new Team"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete Team?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting Team",
+          "message": "Team could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting Team",
+          "message": "Team deleted successfully"
+        }
+      }
+    }
+  },
+  "teamsCreatePage": {
+    "headline": "Create new Team",
+    "description": "Create a new Team",
+    "backlink": "Back to Team overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Team could not be created",
+          "message": "Error creating Team"
+        },
+        "success": {
+          "title": "Team successfully created",
+          "message": "Team was successfully created"
+        }
+      }
+    }
+  },
+  "teamDetailPage": {
+    "backlink": "Back to season Team",
+    "editlink": "Edit Team"
+  },
+  "teamEditPage": {
+    "headline": "Edit Team",
+    "description": "Edit the details of a Team",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Team couldnt be edited",
+          "message": "Error editing the Team"
+        },
+        "success": {
+          "title": "Team edited",
+          "message": "Team was successfully edited"
+        }
+      }
+    }
+  },
+  "userspage": {
+    "headline": "Users Overview",
+    "description": "All Users on the platform",
+    "buttons": {
+      "create": "Create new User"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete User?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting User",
+          "message": "User could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting User",
+          "message": "User deleted successfully"
+        }
+      }
+    }
+  },
+  "usersCreatePage": {
+    "headline": "Create new User",
+    "description": "Create a new User",
+    "backlink": "Back to User overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "User could not be created",
+          "message": "Error creating User"
+        },
+        "success": {
+          "title": "User successfully created",
+          "message": "User was successfully created"
+        }
+      }
+    }
+  },
+  "userDetailPage": {
+    "backlink": "Back to User overview",
+    "editlink": "Edit User"
+  },
+  "userEditPage": {
+    "headline": "Edit User",
+    "description": "Edit the details of a User",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "User couldnt be edited",
+          "message": "Error editing the User"
+        },
+        "success": {
+          "title": "User edited",
+          "message": "User was successfully edited"
+        }
+      }
+    }
+  },
+  "rolespage": {
+    "headline": "Roles Overview",
+    "description": "All Roles on the platform",
+    "buttons": {
+      "create": "Create new Role"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete Role?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting Role",
+          "message": "Role could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting Role",
+          "message": "Role deleted successfully"
+        }
+      }
+    }
+  },
+  "rolesCreatePage": {
+    "headline": "Create new Role",
+    "description": "Create a new Role",
+    "backlink": "Back to Role overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Role could not be created",
+          "message": "Error creating Role"
+        },
+        "success": {
+          "title": "Role successfully created",
+          "message": "Role was successfully created"
+        }
+      }
+    }
+  },
+  "roleDetailPage": {
+    "backlink": "Back to Role overview",
+    "editlink": "Edit Role"
+  },
+  "roleEditPage": {
+    "headline": "Edit Role",
+    "description": "Edit the details of a Role",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Role couldnt be edited",
+          "message": "Error editing the Role"
+        },
+        "success": {
+          "title": "Role edited",
+          "message": "Role was successfully edited"
+        }
+      }
+    }
+  },
+  "teamseasondivisionspage": {
+    "headline": "Teamseasondivision Overview",
+    "description": "All Teamseasondivision on the platform",
+    "buttons": {
+      "create": "Create new Teamseasondivision"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete Teamseasondivision?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting Teamseasondivision",
+          "message": "Teamseasondivision could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting Teamseasondivision",
+          "message": "Teamseasondivision deleted successfully"
+        }
+      }
+    }
+  },
+  "teamseasondivisionsCreatePage": {
+    "headline": "Create new Teamseasondivision",
+    "description": "Create a new Teamseasondivision",
+    "backlink": "Back to Teamseasondivision overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Teamseasondivision could not be created",
+          "message": "Error creating Teamseasondivision"
+        },
+        "success": {
+          "title": "Teamseasondivision successfully created",
+          "message": "Teamseasondivision was successfully created"
+        }
+      }
+    }
+  },
+  "teamseasondivisionDetailPage": {
+    "backlink": "Back to Teamseasondivision overview",
+    "editlink": "Edit Teamseasondivision"
+  },
+  "teamseasondivisionEditPage": {
+    "headline": "Edit Teamseasondivision",
+    "description": "Edit the details of a Teamseasondivision",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Teamseasondivision couldnt be edited",
+          "message": "Error editing the Teamseasondivision"
+        },
+        "success": {
+          "title": "Teamseasondivision edited",
+          "message": "Teamseasondivision was successfully edited"
+        }
+      }
+    }
+  },
+  "matchespage": {
+    "headline": "Matches Overview",
+    "description": "All Matches on the platform",
+    "buttons": {
+      "create": "Create new Matche"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete Match?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting Match",
+          "message": "Match could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting Match",
+          "message": "Match deleted successfully"
+        }
+      }
+    }
+  },
+  "matchesCreatePage": {
+    "headline": "Create new Match",
+    "description": "Create a new Match",
+    "backlink": "Back to Match overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Match could not be created",
+          "message": "Error creating Match"
+        },
+        "success": {
+          "title": "Match successfully created",
+          "message": "Match was successfully created"
+        }
+      }
+    }
+  },
+  "matchDetailPage": {
+    "backlink": "Back to Match overview",
+    "editlink": "Edit Match"
+  },
+  "matchEditPage": {
+    "headline": "Edit Match",
+    "description": "Edit the details of a Match",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Match couldnt be edited",
+          "message": "Error editing the Match"
+        },
+        "success": {
+          "title": "Match edited",
+          "message": "Match was successfully edited"
+        }
+      }
+    }
+  },
+  "weekspage": {
+    "headline": "Weeks Overview",
+    "description": "All Weeks on the platform",
+    "buttons": {
+      "create": "Create new Week"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete Week?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting Week",
+          "message": "Week could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting Week",
+          "message": "Week deleted successfully"
+        }
+      }
+    }
+  },
+  "weeksCreatePage": {
+    "headline": "Create new Week",
+    "description": "Create a new Week",
+    "backlink": "Back to Week overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Week could not be created",
+          "message": "Error creating Week"
+        },
+        "success": {
+          "title": "Week successfully created",
+          "message": "Week was successfully created"
+        }
+      }
+    }
+  },
+  "weekDetailPage": {
+    "backlink": "Back to Week overview",
+    "editlink": "Edit Week"
+  },
+  "weekEditPage": {
+    "headline": "Edit Week",
+    "description": "Edit the details of a Week",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Week couldnt be edited",
+          "message": "Error editing the Week"
+        },
+        "success": {
+          "title": "Week edited",
+          "message": "Week was successfully edited"
+        }
+      }
+    }
+  },
+  "divisionseasonlegendspage": {
+    "headline": "Division Season Legend Overview",
+    "description": "All Division Season Legend on the platform",
+    "buttons": {
+      "create": "Create new Division Season Legend"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete Division Season Legend?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting Division Season Legend",
+          "message": "Division Season Legend could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting Division Season Legend",
+          "message": "Division Season Legend deleted successfully"
+        }
+      }
+    }
+  },
+  "divisionseasonlegendsCreatePage": {
+    "headline": "Create new Division Season Legend",
+    "description": "Create a new Division Season Legend",
+    "backlink": "Back to Division Season Legend overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Division Season Legend could not be created",
+          "message": "Error creating Division Season Legend"
+        },
+        "success": {
+          "title": "Division Season Legend successfully created",
+          "message": "Division Season Legend was successfully created"
+        }
+      }
+    }
+  },
+  "divisionseasonlegendDetailPage": {
+    "backlink": "Back to Division Season Legend overview",
+    "editlink": "Edit Division Season Legend"
+  },
+  "divisionseasonlegendEditPage": {
+    "headline": "Edit Division Season Legend",
+    "description": "Edit the details of a Division Season Legend",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Division Season Legend couldnt be edited",
+          "message": "Error editing the Division Season Legend"
+        },
+        "success": {
+          "title": "Division Season Legend edited",
+          "message": "Division Season Legend was successfully edited"
+        }
+      }
+    }
+  },
+  "stadiumspage": {
+    "headline": "Stadiums Overview",
+    "description": "All Stadiums on the platform",
+    "emptyTitle": "Create your first stadium",
+    "emptyMessage": "Create your first stadium to use it in matches.",
+    "buttons": {
+      "create": "Create Stadium"
+    },
+    "modal": {
+      "delete": {
+        "title": "Delete Stadium?",
+        "cancel": "cancel",
+        "confirm": "confirm"
+      }
+    },
+    "notifications": {
+      "delete": {
+        "error": {
+          "title": "Error deleting Stadium",
+          "message": "Stadium could not be deleted"
+        },
+        "success": {
+          "title": "Success deleting Stadium",
+          "message": "Stadium deleted successfully"
+        }
+      }
+    }
+  },
+  "stadiumsCreatePage": {
+    "headline": "Create new Stadium",
+    "description": "Create a new Stadium",
+    "backlink": "Back to Stadium overview",
+    "notifications": {
+      "create": {
+        "error": {
+          "title": "Stadium could not be created",
+          "message": "Error creating Stadium"
+        },
+        "success": {
+          "title": "Stadium successfully created",
+          "message": "Stadium was successfully created"
+        }
+      }
+    }
+  },
+  "stadiumDetailPage": {
+    "backlink": "Back to Stadium overview",
+    "editlink": "Edit Stadium"
+  },
+  "stadiumEditPage": {
+    "headline": "Edit Stadium",
+    "description": "Edit the details of a Stadium",
+    "backlink": "Cancel",
+    "notifications": {
+      "edit": {
+        "error": {
+          "title": "Stadium couldnt be edited",
+          "message": "Error editing the Stadium"
+        },
+        "success": {
+          "title": "Stadium edited",
+          "message": "Stadium was successfully edited"
+        }
+      }
+    }
+  },
+  "admin": {
+    "league": {
+      "form": {
+        "create": "Create",
+        "update": "Edit",
+        "name": {
+          "label": "Name",
+          "placeholder": "Name des Szenario eingeben...",
+          "description": "Name des Szenario, die in einem Szenario beteiligt ist"
+        },
+        "description": {
+          "label": "Beschreibung",
+          "placeholder": "Beschreibung des Szenario eingeben...",
+          "description": "Beschreibung des Szenario, einer Simulation"
+        },
+        "startingSituation": {
+          "label": "Ausgangslage",
+          "placeholder": "Ausgangslage eines Szenario eingeben...",
+          "description": "Ausgangslage des Szenario, einer Simulation"
+        },
+        "company": {
+          "label": "Betroffene Firma",
+          "placeholder": "Betroffene Firma auswählen..."
+        }
+      },
+      "notifications": {
+        "delete": {
+          "error": "Error deleting the League",
+          "success": "League successfully deleted"
+        },
+        "copy": {
+          "error": "Error copying the League",
+          "success": "League successfully copied"
+        },
+        "create": {
+          "error": "Error creating the League",
+          "success": "League successfully created"
+        },
+        "update": {
+          "error": "Error editing the League",
+          "success": "League edited successfully"
+        },
+        "loadErrorMultiple": "Error loading the Leagues",
+        "loadErrorOne": "Error loading the League"
+      },
+      "modals": {
+        "delete": {
+          "title": "Do you really want to delete League {name}?",
+          "text": "This action cant be undone!",
+          "cancel": "Cancel",
+          "confirm": "Confirm"
+        },
+        "copy": {
+          "title": "Do you really want to copy League {name}?",
+          "text": "This action creates a new League!",
+          "cancel": "Cancel",
+          "confirm": "Confirm"
+        },
+        "create": {
+          "title": "Create League",
+          "cancel": "Cancel",
+          "confirm": "Confirm"
+        },
+        "edit": {
+          "title": "Edit League",
+          "cancel": "Cancel",
+          "confirm": "Confirm"
+        }
+      },
+      "buttons": {
+        "create": "Create League",
+        "delete": "Delete League",
+        "edit": "Edit League"
+      },
+      "detail": {
+        "headline": "League Overview",
+        "description": "All Leagues provided by Catch Europe"
+      },
+      "overview": {
+        "headline": "League Overview",
+        "description": "All Leagues provided by Catch Europe",
+        "emptyTitle": "No Leagues",
+        "emptyMessage": "No leagues are available. Create one."
+      }
+    }
+  }
+}
